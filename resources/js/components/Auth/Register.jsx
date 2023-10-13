@@ -6,13 +6,14 @@ import {
     Typography,
 } from "@material-tailwind/react";
 
-export default function Login() {
+export default function Register() {
     return (
-        <Card color="transparent" shadow={false} className="">
-
+        <Card color="transparent" shadow={false}>
             <form className="mt-8 mb-2  max-w-screen-lg ">
-                <div className="mb-4 flex flex-col gap-6 ">
+                <div className="mb-4 flex flex-col gap-6">
                     <Input size="lg" label="Name" />
+                    <Input size="lg" label="Email" />
+                    <Input type="password" size="lg" label="Password" />
                     <Input size="lg" label="Email" />
                     <Input type="password" size="lg" label="Password" />
                 </div>
