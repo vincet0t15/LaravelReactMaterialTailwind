@@ -1,43 +1,33 @@
 import React from "react";
-
 import {
     Card,
     CardHeader,
     CardBody,
-    Input,
-    Button,
     Typography,
     Tabs,
     TabsHeader,
     TabsBody,
     Tab,
     TabPanel,
-    Select,
-    Option,
 } from "@material-tailwind/react";
-import {
-    BanknotesIcon,
-    CreditCardIcon,
-    LockClosedIcon,
-} from "@heroicons/react/24/solid";
+
+import { BanknotesIcon } from "@heroicons/react/24/solid";
 
 import Login from "./Login";
 import Register from "./Register";
 
 export default function AuthIndex() {
-
     const [type, setType] = React.useState({
-        type: 'card',
-        text: "Login your account"
+        type: "card",
+        text: "Login your account",
     });
 
-    console.log(type)
+    console.log(type);
 
     return (
-        <div className="h-screen  w-full flex items-center justify-center">
-            <Card className="w-full max-w-[30rem]" >
+        <div className="h-screen  w-full flex items-center justify-center dark:bg-gray-900 bg-white">
+            <Card className="w-full max-w-[30rem] dark:bg-gray-800 dark:text-white">
                 <CardHeader
-
                     floated={false}
                     shadow={false}
                     className="m-0 grid place-items-center rounded-b-none py-8 px-4 text-center"
@@ -49,13 +39,29 @@ export default function AuthIndex() {
                         {type.text}
                     </Typography>
                 </CardHeader>
-                <CardBody>
-                    <Tabs value={type.type} className="overflow-hidden">
-                        <TabsHeader className="relative z-0 ">
-                            <Tab value={type.type = "card"} onClick={() => setType({ type: 'card', text: 'Login your account' })}>
+                <CardBody className="dark:text-white">
+                    <Tabs value={type.type} className="overflow-hidden ">
+                        <TabsHeader className="relative z-0 dark:text-white ">
+                            <Tab
+                                value={(type.type = "card")}
+                                onClick={() =>
+                                    setType({
+                                        type: "card",
+                                        text: "Login your account",
+                                    })
+                                }
+                            >
                                 Login
                             </Tab>
-                            <Tab value="paypal" onClick={() => setType({ type: 'paypal', text: 'Register your account' })}>
+                            <Tab
+                                value="paypal"
+                                onClick={() =>
+                                    setType({
+                                        type: "paypal",
+                                        text: "Register your account",
+                                    })
+                                }
+                            >
                                 Register
                             </Tab>
                         </TabsHeader>
@@ -63,27 +69,33 @@ export default function AuthIndex() {
                             className="overflow-hidden"
                             animate={{
                                 initial: {
-                                    x: type.type = "card" ? 400 : -400,
+                                    x: (type.type = "card" ? 400 : -400),
                                 },
                                 mount: {
                                     x: 0,
                                 },
                                 unmount: {
-                                    x: type.type = "card" ? 400 : -400,
+                                    x: (type.type = "card" ? 400 : -400),
                                 },
                             }}
                         >
-                            <TabPanel value={type.card = 'card'} className="p-0 overflow-hidden">
+                            <TabPanel
+                                value={(type.card = "card")}
+                                className="p-0 overflow-hidden"
+                            >
                                 <Login />
                             </TabPanel>
 
-                            <TabPanel value={type.type = 'paypal'} className="p-0">
+                            <TabPanel
+                                value={(type.type = "paypal")}
+                                className="p-0"
+                            >
                                 <Register />
                             </TabPanel>
                         </TabsBody>
                     </Tabs>
                 </CardBody>
-            </Card >
-        </div >
+            </Card>
+        </div>
     );
 }

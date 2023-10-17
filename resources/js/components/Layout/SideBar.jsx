@@ -29,9 +29,13 @@ export default function SideBar() {
     };
 
     return (
-        <Card className="sticky h-full overflow-y-auto rounded-none p-4 shadow-xl shadow-blue-gray-900/5 dark:bg-gray-800">
+        <Card className="sticky h-full overflow-y-auto rounded-none p-4 shadow-xl shadow-blue-gray-900/5 dark:bg-blue-gray-800">
             <div className="mb-2 p-4 ">
-                <Typography variant="h5" color="blue-gray" className="dark:text-white">
+                <Typography
+                    variant="h5"
+                    color="blue-gray"
+                    className="dark:text-white"
+                >
                     Sidebar
                 </Typography>
             </div>
@@ -41,16 +45,24 @@ export default function SideBar() {
                     icon={
                         <ChevronDownIcon
                             strokeWidth={2.5}
-                            className={`mx-auto h-4 w-4 transition-transform ${open === 1 ? "rotate-180" : ""}`}
+                            className={`mx-auto h-4 w-4 transition-transform ${
+                                open === 1 ? "rotate-180" : ""
+                            }`}
                         />
                     }
                 >
                     <ListItem className="p-0" selected={open === 1}>
-                        <AccordionHeader onClick={() => handleOpen(1)} className="hover:bg-gray-100 dark:hover:bg-gray-700  dark:text-white border-b-0 p-3">
+                        <AccordionHeader
+                            onClick={() => handleOpen(1)}
+                            className="hover:bg-gray-100 dark:hover:bg-gray-700  dark:text-white border-b-0 p-3"
+                        >
                             <ListItemPrefix>
                                 <PresentationChartBarIcon className="dark:text-white h-5 w-5" />
                             </ListItemPrefix>
-                            <Typography color="blue-gray" className="mr-auto font-normal dark:text-white ">
+                            <Typography
+                                color="blue-gray"
+                                className="mr-auto font-normal dark:text-white "
+                            >
                                 Dashboard
                             </Typography>
                         </AccordionHeader>
@@ -59,19 +71,28 @@ export default function SideBar() {
                         <List className="p-0 dark:text-white">
                             <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
-                                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                                    <ChevronRightIcon
+                                        strokeWidth={3}
+                                        className="h-3 w-5"
+                                    />
                                 </ListItemPrefix>
                                 Analytics
                             </ListItem>
                             <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
-                                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                                    <ChevronRightIcon
+                                        strokeWidth={3}
+                                        className="h-3 w-5"
+                                    />
                                 </ListItemPrefix>
                                 Reporting
                             </ListItem>
                             <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
-                                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                                    <ChevronRightIcon
+                                        strokeWidth={3}
+                                        className="h-3 w-5"
+                                    />
                                 </ListItemPrefix>
                                 Projects
                             </ListItem>
@@ -83,16 +104,27 @@ export default function SideBar() {
                     icon={
                         <ChevronDownIcon
                             strokeWidth={2.5}
-                            className={`dark:text-white mx-auto h-4 w-4 transition-transform ${open === 2 ? "rotate-180" : ""}`}
+                            className={`dark:text-white mx-auto h-4 w-4 transition-transform ${
+                                open === 2 ? "rotate-180" : ""
+                            }`}
                         />
                     }
                 >
-                    <ListItem className="dark:text-white p-0" selected={open === 2}>
-                        <AccordionHeader onClick={() => handleOpen(2)} className="dark:hover:bg-gray-700 border-b-0 p-3">
-                            <ListItemPrefix >
+                    <ListItem
+                        className="dark:text-white p-0"
+                        selected={open === 2}
+                    >
+                        <AccordionHeader
+                            onClick={() => handleOpen(2)}
+                            className="dark:hover:bg-gray-700 border-b-0 p-3"
+                        >
+                            <ListItemPrefix>
                                 <ShoppingBagIcon className="dark:text-white h-5 w-5" />
                             </ListItemPrefix>
-                            <Typography color="blue-gray" className="dark:text-white mr-auto font-normal">
+                            <Typography
+                                color="blue-gray"
+                                className="dark:text-white mr-auto font-normal"
+                            >
                                 E-Commerce
                             </Typography>
                         </AccordionHeader>
@@ -101,13 +133,19 @@ export default function SideBar() {
                         <List className="p-0 dark:text-white ">
                             <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
-                                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                                    <ChevronRightIcon
+                                        strokeWidth={3}
+                                        className="h-3 w-5"
+                                    />
                                 </ListItemPrefix>
                                 Orders
                             </ListItem>
                             <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
-                                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                                    <ChevronRightIcon
+                                        strokeWidth={3}
+                                        className="h-3 w-5"
+                                    />
                                 </ListItemPrefix>
                                 Products
                             </ListItem>
@@ -120,8 +158,14 @@ export default function SideBar() {
                         <InboxIcon className="dark:text-white h-5 w-5" />
                     </ListItemPrefix>
                     Inbox
-                    <ListItemSuffix >
-                        <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="dark:text-white rounded-full" />
+                    <ListItemSuffix>
+                        <Chip
+                            value="14"
+                            size="sm"
+                            variant="ghost"
+                            color="blue-gray"
+                            className="dark:text-white rounded-full"
+                        />
                     </ListItemSuffix>
                 </ListItem>
                 <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
