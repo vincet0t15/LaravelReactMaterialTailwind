@@ -46,30 +46,30 @@ export default function SideBar() {
                     }
                 >
                     <ListItem className="p-0" selected={open === 1}>
-                        <AccordionHeader onClick={() => handleOpen(1)} className="dark:text-white border-b-0 p-3">
+                        <AccordionHeader onClick={() => handleOpen(1)} className="hover:bg-gray-100 dark:hover:bg-gray-700  dark:text-white border-b-0 p-3">
                             <ListItemPrefix>
                                 <PresentationChartBarIcon className="dark:text-white h-5 w-5" />
                             </ListItemPrefix>
-                            <Typography color="blue-gray" className="mr-auto font-normal dark:text-white">
+                            <Typography color="blue-gray" className="mr-auto font-normal dark:text-white ">
                                 Dashboard
                             </Typography>
                         </AccordionHeader>
                     </ListItem>
                     <AccordionBody className="py-1">
                         <List className="p-0 dark:text-white">
-                            <ListItem>
+                            <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
                                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                 </ListItemPrefix>
                                 Analytics
                             </ListItem>
-                            <ListItem>
+                            <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
                                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                 </ListItemPrefix>
                                 Reporting
                             </ListItem>
-                            <ListItem>
+                            <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
                                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                 </ListItemPrefix>
@@ -88,8 +88,8 @@ export default function SideBar() {
                     }
                 >
                     <ListItem className="dark:text-white p-0" selected={open === 2}>
-                        <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
-                            <ListItemPrefix>
+                        <AccordionHeader onClick={() => handleOpen(2)} className="dark:hover:bg-gray-700 border-b-0 p-3">
+                            <ListItemPrefix >
                                 <ShoppingBagIcon className="dark:text-white h-5 w-5" />
                             </ListItemPrefix>
                             <Typography color="blue-gray" className="dark:text-white mr-auto font-normal">
@@ -98,14 +98,14 @@ export default function SideBar() {
                         </AccordionHeader>
                     </ListItem>
                     <AccordionBody className="py-1">
-                        <List className="p-0 dark:text-white">
-                            <ListItem>
+                        <List className="p-0 dark:text-white ">
+                            <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
                                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                 </ListItemPrefix>
                                 Orders
                             </ListItem>
-                            <ListItem>
+                            <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                                 <ListItemPrefix>
                                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                 </ListItemPrefix>
@@ -115,7 +115,7 @@ export default function SideBar() {
                     </AccordionBody>
                 </Accordion>
                 <hr className="my-2 border-blue-gray-50" />
-                <ListItem className="dark:text-white">
+                <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                     <ListItemPrefix>
                         <InboxIcon className="dark:text-white h-5 w-5" />
                     </ListItemPrefix>
@@ -124,19 +124,19 @@ export default function SideBar() {
                         <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="dark:text-white rounded-full" />
                     </ListItemSuffix>
                 </ListItem>
-                <ListItem className="dark:text-white">
+                <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                     <ListItemPrefix>
                         <UserCircleIcon className="dark:text-white h-5 w-5" />
                     </ListItemPrefix>
                     Profile
                 </ListItem>
-                <ListItem className="dark:text-white">
+                <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                     <ListItemPrefix>
                         <Cog6ToothIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     Settings
                 </ListItem>
-                <ListItem className="dark:text-white">
+                <ListItem className="dark:focus:bg-gray-600 dark:focus:text-black dark:hover:bg-gray-700 dark:text-white">
                     <ListItemPrefix>
                         <PowerIcon className="h-5 w-5" />
                     </ListItemPrefix>
