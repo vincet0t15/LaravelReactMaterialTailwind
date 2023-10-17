@@ -22,16 +22,16 @@ import {
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 
 export default function SideBar() {
-    const [open, setOpen] = React.useState(0);
+    const [open, setOpen] = React.useState(false);
 
     const handleOpen = (value) => {
         setOpen(open === value ? 0 : value);
     };
 
     return (
-        <Card className="h-screen w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
-            <div className="mb-2 p-4">
-                <Typography variant="h5" color="blue-gray">
+        <Card className="sticky h-full overflow-y-auto rounded-none p-4 shadow-xl shadow-blue-gray-900/5 dark:bg-gray-800">
+            <div className="mb-2 p-4 ">
+                <Typography variant="h5" color="blue-gray" className="dark:text-white">
                     Sidebar
                 </Typography>
             </div>
@@ -46,17 +46,17 @@ export default function SideBar() {
                     }
                 >
                     <ListItem className="p-0" selected={open === 1}>
-                        <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
+                        <AccordionHeader onClick={() => handleOpen(1)} className="dark:text-white border-b-0 p-3">
                             <ListItemPrefix>
-                                <PresentationChartBarIcon className="h-5 w-5" />
+                                <PresentationChartBarIcon className="dark:text-white h-5 w-5" />
                             </ListItemPrefix>
-                            <Typography color="blue-gray" className="mr-auto font-normal">
+                            <Typography color="blue-gray" className="mr-auto font-normal dark:text-white">
                                 Dashboard
                             </Typography>
                         </AccordionHeader>
                     </ListItem>
                     <AccordionBody className="py-1">
-                        <List className="p-0">
+                        <List className="p-0 dark:text-white">
                             <ListItem>
                                 <ListItemPrefix>
                                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
@@ -83,22 +83,22 @@ export default function SideBar() {
                     icon={
                         <ChevronDownIcon
                             strokeWidth={2.5}
-                            className={`mx-auto h-4 w-4 transition-transform ${open === 2 ? "rotate-180" : ""}`}
+                            className={`dark:text-white mx-auto h-4 w-4 transition-transform ${open === 2 ? "rotate-180" : ""}`}
                         />
                     }
                 >
-                    <ListItem className="p-0" selected={open === 2}>
+                    <ListItem className="dark:text-white p-0" selected={open === 2}>
                         <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
                             <ListItemPrefix>
-                                <ShoppingBagIcon className="h-5 w-5" />
+                                <ShoppingBagIcon className="dark:text-white h-5 w-5" />
                             </ListItemPrefix>
-                            <Typography color="blue-gray" className="mr-auto font-normal">
+                            <Typography color="blue-gray" className="dark:text-white mr-auto font-normal">
                                 E-Commerce
                             </Typography>
                         </AccordionHeader>
                     </ListItem>
                     <AccordionBody className="py-1">
-                        <List className="p-0">
+                        <List className="p-0 dark:text-white">
                             <ListItem>
                                 <ListItemPrefix>
                                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
@@ -114,28 +114,29 @@ export default function SideBar() {
                         </List>
                     </AccordionBody>
                 </Accordion>
-                <ListItem>
+                <hr className="my-2 border-blue-gray-50" />
+                <ListItem className="dark:text-white">
                     <ListItemPrefix>
-                        <InboxIcon className="h-5 w-5" />
+                        <InboxIcon className="dark:text-white h-5 w-5" />
                     </ListItemPrefix>
                     Inbox
-                    <ListItemSuffix>
-                        <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
+                    <ListItemSuffix >
+                        <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="dark:text-white rounded-full" />
                     </ListItemSuffix>
                 </ListItem>
-                <ListItem>
+                <ListItem className="dark:text-white">
                     <ListItemPrefix>
-                        <UserCircleIcon className="h-5 w-5" />
+                        <UserCircleIcon className="dark:text-white h-5 w-5" />
                     </ListItemPrefix>
                     Profile
                 </ListItem>
-                <ListItem>
+                <ListItem className="dark:text-white">
                     <ListItemPrefix>
                         <Cog6ToothIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     Settings
                 </ListItem>
-                <ListItem>
+                <ListItem className="dark:text-white">
                     <ListItemPrefix>
                         <PowerIcon className="h-5 w-5" />
                     </ListItemPrefix>
